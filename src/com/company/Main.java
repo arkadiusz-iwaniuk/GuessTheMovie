@@ -16,11 +16,9 @@ public class Main {
         while (fileScanner.hasNextLine()) {
             line = fileScanner.nextLine();
             size += 1;
-            //System.out.println(size + ". " + line);
         }
 
         int randomNumber = (int) (Math.random() * size + 1);
-        //System.out.println(randomNumber);
 
         Scanner fileScanner2 = new Scanner(file);
         String chosenMovie = "";
@@ -29,7 +27,7 @@ public class Main {
         }
 
         System.out.println("I have drawn a movie title for you. Try to guess it by entering the next letters. You have 10 tries.");
-        System.out.println(chosenMovie);
+        //System.out.println(chosenMovie);
 
         System.out.println(new String(chosenMovie).replaceAll("\\w", "_"));
 
@@ -51,7 +49,6 @@ public class Main {
                 System.out.print(hiddenTittleArray[k]);
             }
             System.out.println();
-            //System.out.println(String.copyValueOf(hiddenTittleArray));
 
             if((String.copyValueOf(hiddenTittleArray)).equals(chosenMovie)){
                 System.out.println("Great! You have won.");
